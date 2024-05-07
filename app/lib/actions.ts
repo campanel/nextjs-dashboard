@@ -118,7 +118,6 @@ export async function updateInvoice(
   ) {
     try {
       await signIn('credentials', formData);
-      return NextResponse.next();
     } catch (error) {
       if (error instanceof AuthError) {
         switch (error.type) {
